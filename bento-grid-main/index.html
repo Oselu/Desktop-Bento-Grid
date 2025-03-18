@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Bento grid</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+   
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+  body{
+    font-family: "DM Sans", serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(249, 249, 249);
+  }
+
+
+  .bento-grid-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: minmax(auto, auto) minmax(auto, auto);
+    gap: 16px;
+    max-width: 800px; 
+    margin: 0 auto;
+    
+
+   
+  }
+
+   .grid-item{
+    background-color: blue;
+    text-align: center;
+    border-radius: 12px;
+  }
+
+
+  .item-one-span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-top: 16px;
+    padding-bottom: 0px;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: left;
+    background-color: hsl(31, 66%, 93%);
+    grid-column: 1;
+    grid-row: 1/3;
+    height: 100%;
+    align-self: start;
+  }
+
+  .item-two-span{
+    background-color: hsl(256, 67%, 59%);
+    grid-column: 2/4;
+    grid-row: 1/2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 28px;
+    align-self: center;
+  }
+
+  .item-three-span{
+    background-color: hsl(254, 88%, 90%);
+    grid-column: 4/5;
+    grid-row: 1/4;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .item-four-span{
+    background-color: hsl(39, 100%, 71%);
+    grid-column: 1;
+    grid-row: 3/5;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 28px;
+  }
+
+  .item-five{
+    background-color: hsl(0, 0%, 100%);
+    grid-column: 2/3;
+    grid-row: 2/4;
+    height: 100%;
+  }
+
+  .item-six{
+    background-color: hsl(39, 100%, 71%);
+    grid-column: 3/4;
+    grid-row: 2/4;
+    height: 100%;
+  }
+
+  .item-seven{
+    background-color:  hsl(0, 0%, 100%);
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+  
+  .item-eight-span{
+    background-color: hsl(256, 67%, 59%);
+    grid-column: 3/5;
+    grid-row: 4/5;
+    width: 100%;
+  }
+
+  .item-one-span img{
+   max-width:100%;
+   height: auto;
+   padding-top: 16px;
+   
+   
+  }
+
+  .item-one-span p{
+    font-size: 28px;
+  }
+
+  .item-two-span img{
+  padding-top: 12px;
+  padding-bottom: 8px;
+  max-width:30%;
+  
+   
+  }
+
+.item-four-span img{
+  max-width:120%;
+  padding-right: 16px;
+  
+}
+
+.item-five img{
+  max-width:50%;
+  
+}
+
+.item-six img{
+  max-width:50%;
+}
+
+.item-seven img{
+  max-width:50%;
+  
+}
+
+.item-three-span img{
+  max-width:50%;
+ 
+}
+
+.item-eight-span img{
+  max-width:20%;
+  
+}
+
+.highlighted-one-span{
+ color: hsl(256, 67%, 59%);
+ font-style: italic;
+}
+
+.highlighted-two-span{
+ color: hsl(0, 0%, 100%);
+ font-style: italic;
+}
+
+.second-highlighted-two-span{
+  color: hsl(39, 100%, 71%);
+}
+
+
+.item-one-span p{
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+.item-two-span p{
+  color:hsl(0, 0%, 100%);
+  font-size: 48px;
+  line-height: 1;
+  
+}
+
+.item-two-second-line{
+  color: hsl(0, 0%, 100%);
+  font-size: 12px;
+}
+
+.item-three-span p{
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -2px;
+  padding-left: 16px;
+  padding-bottom:12px;
+  text-align: left;
+}
+
+.item-three-span img{
+  max-width: 100%;
+  position: relative;
+  left: 1rem;
+}
+
+.item-three-second-line{
+  font-size: 10px;
+  text-align: left;
+  padding-left: 16px;
+  padding-top: 12px;
+  
+}
+
+.item-four-span p{
+  font-size: 28px;
+  letter-spacing: -2px;
+  line-height: 1;
+  text-align: left;
+  padding-bottom: 32px;
+}
+
+.item-five p{
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -2px;
+  text-align: left;
+
+}
+
+
+  </style>
+</head>
+
+<body>
+
+<main>
+  <div class="bento-grid-container">
+
+    <div class="grid-item item-one-span"> 
+      <p>Create and schedule content <span class="highlighted-one-span">quicker</span></p>
+      <img src="assets/images/illustration-create-post.webp" alt="create post button">
+    </div>
+
+    <div class="grid-item item-two-span"> 
+      <p>Social Media <span class="second-highlighted-two-span">10x</span> <span class="highlighted-two-span">Faster</span> with AI</p>
+      <img src="assets/images/illustration-five-stars.webp" alt="">
+      <small class="item-two-second-line">Over 4,000 5-star reviews</small>
+    </div>
+
+    <div class="grid-item item-three-span"> 
+      <p>Schedule to social media.</p>
+      <img src="assets/images/illustration-schedule-posts.webp" alt="">
+      <small class="item-three-second-line">Optimize post timings to publish content at the perfect time for your audience.</small>
+    </div>
+
+    <div class="grid-item item-four-span"> 
+      <p>Write your content using AI.</p>
+      <img src="assets/images/illustration-ai-content.webp" alt="">
+    </div>
+
+    <div class="grid-item item-five"> 
+      <p>Manage multiple accounts and platforms</p>
+      <img src="assets/images/illustration-multiple-platforms.webp" alt="">
+    </div>
+
+    <div class="grid-item item-six"> 
+      <p>Maintain a consistent posting schedule.</p>
+      <img src="assets/images/illustration-consistent-schedule.webp" alt="">
+    </div>
+
+    <div class="grid-item item-seven"> 
+      <h3>56%</h3>
+      <p> faster audience growth</p>
+      <img src="assets/images/illustration-audience-growth.webp" alt="">
+    </div>
+    <div class="grid-item item-eight-span"> 
+      <p>Grow followers with non-stop content.</p>
+      <img src="assets/images/illustration-grow-followers.webp" alt="">
+    </div>
+    
+
+   </div>
+</main>
+   
+
+  <!--
+   Social Media 10x Faster with AI
+  Over 4,000 5-star reviews
+
+  Manage multiple accounts and platforms.
+
+  Maintain a consistent posting schedule.
+
+  Schedule to social media.
+  Optimize post timings to publish content at the perfect time for your audience.
+  
+  Grow followers with non-stop content.
+
+  >56% faster audience growth
+  
+  Create and schedule content quicker.
+
+  Write your content using AI. -->
+  
+  
+</body>
+</html>
