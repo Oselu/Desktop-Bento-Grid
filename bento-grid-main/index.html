@@ -106,20 +106,30 @@
     background-color: hsl(0, 0%, 100%);
     grid-column: 2/3;
     grid-row: 2/4;
-    height: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    overflow: hidden;
   }
 
   .item-six{
     background-color: hsl(39, 100%, 71%);
     grid-column: 3/4;
     grid-row: 2/4;
-    height: 100%;
+    height: auto;
+    overflow: hidden;
+    
   }
 
   .item-seven{
     background-color:  hsl(0, 0%, 100%);
     grid-column: 2/3;
     grid-row: 4/5;
+    padding: 24px;
   }
   
   .item-eight-span{
@@ -127,6 +137,11 @@
     grid-column: 3/5;
     grid-row: 4/5;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .item-one-span img{
@@ -156,16 +171,22 @@
 }
 
 .item-five img{
-  max-width:50%;
+  max-width:140%;
+  position: relative;
+  left: 1.5rem;
+
   
 }
 
 .item-six img{
-  max-width:50%;
+  max-width:80%;
+  position: relative;
+  top: 1rem;
 }
 
 .item-seven img{
-  max-width:50%;
+  max-width:80%;
+  padding-top: 12px;
   
 }
 
@@ -175,7 +196,10 @@
 }
 
 .item-eight-span img{
-  max-width:20%;
+  max-width:50%;
+  height: auto;
+  padding-right: 8px;
+
   
 }
 
@@ -221,13 +245,13 @@
 }
 
 .item-three-span img{
-  max-width: 100%;
+  max-width: 150%;
   position: relative;
-  left: 1rem;
+  left: 3.8rem;
 }
 
 .item-three-second-line{
-  font-size: 10px;
+  font-size: 14px;
   text-align: left;
   padding-left: 16px;
   padding-top: 12px;
@@ -249,6 +273,38 @@
   text-align: left;
 
 }
+
+.item-six p{
+  font-size: 26px;
+  line-height: 1;
+  letter-spacing: -2px;
+  text-align: left;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  padding-bottom: 0px;
+
+
+}
+
+.item-seven h3{
+ font-size: 64px;
+ font-weight:500;
+}
+
+.item-seven small{
+  font-size: 14px;
+}
+
+.item-eight-span  p{
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -1px;
+  text-align: left;
+  color:  hsl(0, 0%, 100%);
+  padding-left: 8px;
+}
+
 
 
   </style>
@@ -282,8 +338,8 @@
     </div>
 
     <div class="grid-item item-five"> 
-      <p>Manage multiple accounts and platforms</p>
       <img src="assets/images/illustration-multiple-platforms.webp" alt="">
+      <p>Manage multiple accounts and platforms</p>
     </div>
 
     <div class="grid-item item-six"> 
@@ -292,13 +348,14 @@
     </div>
 
     <div class="grid-item item-seven"> 
-      <h3>56%</h3>
-      <p> faster audience growth</p>
+      <h3> >56%</h3>
+      <small> faster audience growth</small>
       <img src="assets/images/illustration-audience-growth.webp" alt="">
     </div>
+
     <div class="grid-item item-eight-span"> 
-      <p>Grow followers with non-stop content.</p>
       <img src="assets/images/illustration-grow-followers.webp" alt="">
+      <p>Grow followers with non-stop content.</p>
     </div>
     
 
